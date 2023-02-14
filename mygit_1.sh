@@ -2,9 +2,6 @@
 
 git remote set-url origin https://github.com/HCarlos/SIACentroIOS.git
 
-
-# git remote set-url origin git@github.com:HCarlos/SIACentroIOS.git
-
 # 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
 
 # pwd : postg  = R=D7,Z)$F%q,Kj?CP,DM{1CFNTtQ1B@4=V!d
@@ -19,7 +16,6 @@ git checkout master
 
 git status
 
-#git rm --cached /.env
 git rm -r --cached .csv
 git rm -r --cached public/csv
 git rm -r --cached public/csv/
