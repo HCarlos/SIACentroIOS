@@ -8,14 +8,14 @@ echo "#### Por @Ch50Dev" >> README.md
 git init
 git add README.md
 git commit -m "Inicio"
-git remote add origin https://github.com/HCarlos/SIACentroIOS.git
+git remote add origin "https://github.com/HCarlos/SIACentroIOS.git"
 git push -u origin master
 
 #echo "" > .gitignore
 #git add .gitignore
 git commit -m "message" .gitignore
 
-git remote set-url origin https://github.com/HCarlos/SIACentroIOS.git
+git remote set-url origin "https://github.com/HCarlos/SIACentroIOS.git"
 git config --global user.email "r0@tecnointel.mx"
 git config --global user.name "HCarlos"
 git config --global color.ui true
