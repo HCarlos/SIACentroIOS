@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B291AF0CC5307D991E6CF19 /* Pods_SIACentro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8608A483E4D3B4EED04FC3D7 /* Pods_SIACentro.framework */; };
+		D26348132996C5C700A895BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26348122996C5C700A895BB /* AppDelegate.swift */; };
+		D26348152996C5C700A895BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26348142996C5C700A895BB /* SceneDelegate.swift */; };
+		D26348172996C5C700A895BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26348162996C5C700A895BB /* ViewController.swift */; };
+		D263481A2996C5C700A895BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26348182996C5C700A895BB /* Main.storyboard */; };
+		D263481C2996C5C900A895BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D263481B2996C5C900A895BB /* Assets.xcassets */; };
+		D263481F2996C5C900A895BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D263481D2996C5C900A895BB /* LaunchScreen.storyboard */; };
+		D2BCF6ED299AF95E0000B69F /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BCF6EC299AF95E0000B69F /* UserResponse.swift */; };
+		D2BCF6F1299AFD9C0000B69F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BCF6F0299AFD9C0000B69F /* UserModel.swift */; };
+		D2BCF6F3299AFEB30000B69F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BCF6F2299AFEB30000B69F /* UserManager.swift */; };
+		D2BCF6F6299B02B40000B69F /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BCF6F5299B02B40000B69F /* Singleton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		186710B3538BFC5669552A2D /* Pods-SIACentro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIACentro.release.xcconfig"; path = "Target Support Files/Pods-SIACentro/Pods-SIACentro.release.xcconfig"; sourceTree = "<group>"; };
+		8608A483E4D3B4EED04FC3D7 /* Pods_SIACentro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SIACentro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A31EAFAB086D60D4255CF06E /* Pods-SIACentro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIACentro.debug.xcconfig"; path = "Target Support Files/Pods-SIACentro/Pods-SIACentro.debug.xcconfig"; sourceTree = "<group>"; };
+		D263480F2996C5C700A895BB /* SIACentro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIACentro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D26348122996C5C700A895BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D26348142996C5C700A895BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D26348162996C5C700A895BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D26348192996C5C700A895BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D263481B2996C5C900A895BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D263481E2996C5C900A895BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D26348202996C5C900A895BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2BCF6EC299AF95E0000B69F /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		D2BCF6F0299AFD9C0000B69F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D2BCF6F2299AFEB30000B69F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		D2BCF6F5299B02B40000B69F /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D263480C2996C5C700A895BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B291AF0CC5307D991E6CF19 /* Pods_SIACentro.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3ED509967253B4D41A26AF6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A31EAFAB086D60D4255CF06E /* Pods-SIACentro.debug.xcconfig */,
+				186710B3538BFC5669552A2D /* Pods-SIACentro.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		87DF5CFEC0D31A8BB128866C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8608A483E4D3B4EED04FC3D7 /* Pods_SIACentro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D26348062996C5C700A895BB = {
+			isa = PBXGroup;
+			children = (
+				D26348112996C5C700A895BB /* SIACentro */,
+				D26348102996C5C700A895BB /* Products */,
+				3ED509967253B4D41A26AF6A /* Pods */,
+				87DF5CFEC0D31A8BB128866C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D26348102996C5C700A895BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D263480F2996C5C700A895BB /* SIACentro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D26348112996C5C700A895BB /* SIACentro */ = {
+			isa = PBXGroup;
+			children = (
+				D2BCF6EB299AF9370000B69F /* Model */,
+				D26348122996C5C700A895BB /* AppDelegate.swift */,
+				D26348142996C5C700A895BB /* SceneDelegate.swift */,
+				D2BCF6EF299AF9730000B69F /* Controller */,
+				D2BCF6EE299AF9660000B69F /* View */,
+				D263481B2996C5C900A895BB /* Assets.xcassets */,
+				D263481D2996C5C900A895BB /* LaunchScreen.storyboard */,
+				D26348202996C5C900A895BB /* Info.plist */,
+				D2BCF6F7299B02BA0000B69F /* Classes */,
+			);
+			path = SIACentro;
+			sourceTree = "<group>";
+		};
+		D2BCF6EB299AF9370000B69F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2BCF6F4299AFEBA0000B69F /* User */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2BCF6EE299AF9660000B69F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D26348182996C5C700A895BB /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D2BCF6EF299AF9730000B69F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D26348162996C5C700A895BB /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D2BCF6F4299AFEBA0000B69F /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D2BCF6EC299AF95E0000B69F /* UserResponse.swift */,
+				D2BCF6F0299AFD9C0000B69F /* UserModel.swift */,
+				D2BCF6F2299AFEB30000B69F /* UserManager.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		D2BCF6F7299B02BA0000B69F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D2BCF6F5299B02B40000B69F /* Singleton.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D263480E2996C5C700A895BB /* SIACentro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D26348232996C5C900A895BB /* Build configuration list for PBXNativeTarget "SIACentro" */;
+			buildPhases = (
+				AF5425429A905FD2BC7B5394 /* [CP] Check Pods Manifest.lock */,
+				D263480B2996C5C700A895BB /* Sources */,
+				D263480C2996C5C700A895BB /* Frameworks */,
+				D263480D2996C5C700A895BB /* Resources */,
+				F27F3674384F8D60D7E052B6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SIACentro;
+			productName = SIACentro;
+			productReference = D263480F2996C5C700A895BB /* SIACentro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D26348072996C5C700A895BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					D263480E2996C5C700A895BB = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = D263480A2996C5C700A895BB /* Build configuration list for PBXProject "SIACentro" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D26348062996C5C700A895BB;
+			productRefGroup = D26348102996C5C700A895BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D263480E2996C5C700A895BB /* SIACentro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D263480D2996C5C700A895BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D263481F2996C5C900A895BB /* LaunchScreen.storyboard in Resources */,
+				D263481C2996C5C900A895BB /* Assets.xcassets in Resources */,
+				D263481A2996C5C700A895BB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AF5425429A905FD2BC7B5394 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SIACentro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F27F3674384F8D60D7E052B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SIACentro/Pods-SIACentro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SIACentro/Pods-SIACentro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SIACentro/Pods-SIACentro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D263480B2996C5C700A895BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2BCF6F3299AFEB30000B69F /* UserManager.swift in Sources */,
+				D2BCF6F6299B02B40000B69F /* Singleton.swift in Sources */,
+				D26348172996C5C700A895BB /* ViewController.swift in Sources */,
+				D26348132996C5C700A895BB /* AppDelegate.swift in Sources */,
+				D26348152996C5C700A895BB /* SceneDelegate.swift in Sources */,
+				D2BCF6F1299AFD9C0000B69F /* UserModel.swift in Sources */,
+				D2BCF6ED299AF95E0000B69F /* UserResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D26348182996C5C700A895BB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D26348192996C5C700A895BB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D263481D2996C5C900A895BB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D263481E2996C5C900A895BB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D26348212996C5C900A895BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D26348222996C5C900A895BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D26348242996C5C900A895BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A31EAFAB086D60D4255CF06E /* Pods-SIACentro.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F4T3652GG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SIACentro/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SIACentro;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.gob.villahermosa.SIACentro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D26348252996C5C900A895BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 186710B3538BFC5669552A2D /* Pods-SIACentro.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6F4T3652GG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SIACentro/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SIACentro;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.gob.villahermosa.SIACentro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D263480A2996C5C700A895BB /* Build configuration list for PBXProject "SIACentro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D26348212996C5C900A895BB /* Debug */,
+				D26348222996C5C900A895BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D26348232996C5C900A895BB /* Build configuration list for PBXNativeTarget "SIACentro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D26348242996C5C900A895BB /* Debug */,
+				D26348252996C5C900A895BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D26348072996C5C700A895BB /* Project object */;
+}
