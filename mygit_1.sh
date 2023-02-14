@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-git remote set-url origin https://github.com/HCarlos/ServiMun.git
-#git remote add origin https://github.com/HCarlos/ServiMun.git
+git remote set-url origin https://github.com/HCarlos/SIACentroIOS.git
 
-# git remote set-url origin git@github.com:HCarlos/ServiMun.git
 
-# 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
+# git remote set-url origin git@github.com:HCarlos/SIACentroIOS.git
+
+# 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
 
 # pwd : postg  = R=D7,Z)$F%q,Kj?CP,DM{1CFNTtQ1B@4=V!d
 
@@ -40,7 +40,7 @@ git rm -r --cached composer.lock
 
 git add .
 
-git commit -m "AteMun - B46 - A77 | L7.30.6 Production"
+git commit -m "SIACentroIOS - A1 - A1 | L7.30.6 Production"
 
 git push -u origin master --force
 
