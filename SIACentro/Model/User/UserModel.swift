@@ -8,8 +8,9 @@
 import Foundation
 
 struct UserModel {
-    let status: Int?
-    let msg, accessToken, tokenType: String?
+    let status: Int
+    let msg: String
+    let accessToken, tokenType: String?
     let id: Int?
     let username, email, nombre, apPaterno: String?
     let apMaterno, curp, emails, celulares: String?
@@ -29,3 +30,4 @@ struct UserModel {
     let ubicacionID, imagenID: Int?
     let uuid: String?
 }
+

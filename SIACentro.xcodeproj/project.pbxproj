@@ -10,7 +10,7 @@
 		1B291AF0CC5307D991E6CF19 /* Pods_SIACentro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8608A483E4D3B4EED04FC3D7 /* Pods_SIACentro.framework */; };
 		D26348132996C5C700A895BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26348122996C5C700A895BB /* AppDelegate.swift */; };
 		D26348152996C5C700A895BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26348142996C5C700A895BB /* SceneDelegate.swift */; };
-		D26348172996C5C700A895BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26348162996C5C700A895BB /* ViewController.swift */; };
+		D26348172996C5C700A895BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26348162996C5C700A895BB /* LoginViewController.swift */; };
 		D263481A2996C5C700A895BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D26348182996C5C700A895BB /* Main.storyboard */; };
 		D263481C2996C5C900A895BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D263481B2996C5C900A895BB /* Assets.xcassets */; };
 		D263481F2996C5C900A895BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D263481D2996C5C900A895BB /* LaunchScreen.storyboard */; };
@@ -27,11 +27,12 @@
 		D263480F2996C5C700A895BB /* SIACentro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIACentro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D26348122996C5C700A895BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D26348142996C5C700A895BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D26348162996C5C700A895BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D26348162996C5C700A895BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D26348192996C5C700A895BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D263481B2996C5C900A895BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D263481E2996C5C900A895BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D26348202996C5C900A895BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D28AC86829A6EAFE002CC09E /* SIACentro.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = SIACentro.profdata; sourceTree = "<group>"; };
 		D2BCF6EC299AF95E0000B69F /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
 		D2BCF6F0299AFD9C0000B69F /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D2BCF6F2299AFEB30000B69F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
@@ -74,6 +75,7 @@
 				D26348102996C5C700A895BB /* Products */,
 				3ED509967253B4D41A26AF6A /* Pods */,
 				87DF5CFEC0D31A8BB128866C /* Frameworks */,
+				D28AC86729A6EAFE002CC09E /* OptimizationProfiles */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +103,14 @@
 			path = SIACentro;
 			sourceTree = "<group>";
 		};
+		D28AC86729A6EAFE002CC09E /* OptimizationProfiles */ = {
+			isa = PBXGroup;
+			children = (
+				D28AC86829A6EAFE002CC09E /* SIACentro.profdata */,
+			);
+			path = OptimizationProfiles;
+			sourceTree = "<group>";
+		};
 		D2BCF6EB299AF9370000B69F /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +130,7 @@
 		D2BCF6EF299AF9730000B69F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D26348162996C5C700A895BB /* ViewController.swift */,
+				D26348162996C5C700A895BB /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,7 +270,7 @@
 			files = (
 				D2BCF6F3299AFEB30000B69F /* UserManager.swift in Sources */,
 				D2BCF6F6299B02B40000B69F /* Singleton.swift in Sources */,
-				D26348172996C5C700A895BB /* ViewController.swift in Sources */,
+				D26348172996C5C700A895BB /* LoginViewController.swift in Sources */,
 				D26348132996C5C700A895BB /* AppDelegate.swift in Sources */,
 				D26348152996C5C700A895BB /* SceneDelegate.swift in Sources */,
 				D2BCF6F1299AFD9C0000B69F /* UserModel.swift in Sources */,
@@ -410,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6F4T3652GG;
@@ -442,6 +453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6F4T3652GG;

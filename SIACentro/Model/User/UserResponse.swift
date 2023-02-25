@@ -9,8 +9,9 @@ import Foundation
 
 // MARK: - Welcome
 struct UserResponse: Codable {
-    let status: Int?
-    let msg, accessToken, tokenType: String?
+    let status: Int
+    let msg: String
+    let accessToken, tokenType: String?
     let user: User?
 
     enum CodingKeys: String, CodingKey {
@@ -19,6 +20,7 @@ struct UserResponse: Codable {
         case tokenType = "token_type"
         case user
     }
+ 
 }
 
 // MARK: - User
@@ -67,4 +69,6 @@ struct User: Codable {
         case imagenID = "imagen_id"
         case uuid
     }
+ 
+    
 }
