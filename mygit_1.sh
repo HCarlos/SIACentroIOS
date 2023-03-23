@@ -2,7 +2,7 @@
 
 git remote set-url origin https://github.com/HCarlos/SIACentroIOS.git
 
-# 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
+# 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
 
 # pwd : postg  = R=D7,Z)$F%q,Kj?CP,DM{1CFNTtQ1B@4=V!d
 
