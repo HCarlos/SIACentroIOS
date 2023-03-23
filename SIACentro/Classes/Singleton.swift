@@ -12,8 +12,13 @@ class Singleton {
     let URL_API: String = "https://siac.villahermosa.gob.mx/api/v1/"
     let URL_Home: String = "https://siac.villahermosa.gob.mx/"
     let pathLogin: String = "login"
+
+    let pathGetSolicitudes: String = "denuncia/getlist"
+    let pathSendSolicitud: String = "denuncia/insert"
+
+    var User: UserModel? = nil
     
-    var User: UserModel? = nil;
+    var stringImageBase64 = ""
 
     static var shared: Singleton = {
 
@@ -43,6 +48,24 @@ class Singleton {
     func getUser() -> UserModel {
         return self.User!
     }
+    
+    func getUrlAPIGetSolicitudesList() -> String {
+        return URL_API + pathGetSolicitudes
+    }
+    
+    func getUrlAPISendSolicitud() -> String {
+        return URL_API + pathSendSolicitud
+    }
+
+    
+    func setStringImageBase64(_stringImageBase64: String){
+        self.stringImageBase64 = _stringImageBase64
+    }
+    
+    func getStringImageBase64() -> String {
+        return self.stringImageBase64
+    }
+    
     
         
 

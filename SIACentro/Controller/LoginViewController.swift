@@ -11,37 +11,51 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-    
     @IBOutlet weak var lblError: UILabel!
-    
     @IBOutlet weak var Activity: UIActivityIndicatorView!
+    @IBOutlet weak var logo: UIImageView!
     
     lazy var userManager = UserManager()
+    
     lazy var UserLogged: UserModel? = nil {
         didSet{
             getResponseAPI()
         }
     }
+    
     lazy var errorSet: String = "" {
         didSet{
             viewErrorConnectionAPI()
         }
     }
+
+    private var imagenFondo: UIImageView {
+        let imageView = UIImageView(frame: UIScreen.main.bounds)
+        imageView.image = UIImage(named: "Background")
+        imageView.contentMode = .scaleToFill
         
-    
-    
-    
-    
-    
+        txtUsername.textColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
+        txtUsername.layer.borderColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
+        txtUsername.layer.borderWidth = 1
+        txtUsername.layer.cornerRadius = 8;
+
+        txtPassword.textColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
+        txtPassword.layer.borderColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
+        txtPassword.layer.borderWidth = 1
+        txtPassword.layer.cornerRadius = 8;
+
+       return imageView
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         userManager.delegate = self
-        
         Activity.isHidden = true
+        self.hideKeyboardWhenTappedAround()
+
+        view.insertSubview(imagenFondo, at: 0)
         
-        // Do any additional setup after loading the view.
     }
             
 
@@ -54,9 +68,9 @@ class LoginViewController: UIViewController {
         
         self.lblError.text = "Iniciando sessión..."
         
-        let concat = Username! + " " + Password!
+//        let concat = Username! + " " + Password!
         
-        print("PRESIONASTE : " + concat)
+//        print("PRESIONASTE : " + concat)
         Activity.isHidden = false
         Activity.startAnimating()
         
@@ -81,10 +95,15 @@ class LoginViewController: UIViewController {
                     gen = "o"
                 }
                 lblError.text = "Bienvenid"+gen+": " + S.getUser().nombre! + " " + S.getUser().apPaterno!
+                //[self, init(identifier: MisDenunciasViewController);]
+                
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let myVC = storyboard.instantiateViewController(withIdentifier: "Navigator1")
+                    self.present(myVC, animated: true, completion: nil)
+                
             }
             Activity.stopAnimating()
             Activity.isHidden = true
-
 
         }
     }
@@ -94,20 +113,34 @@ class LoginViewController: UIViewController {
             lblError.text = errorSet
         }
     }
+    
 
     
 }
 
 extension LoginViewController: UserManagerDelegate{
     func didLoginUser(User: UserModel) {
-        print(User)
+//        print(User)
         self.UserLogged = User;
     }
     
     func didFailWithError(_str: String) {
-        print(_str)
+//        print(_str)
         self.errorSet = _str
     }
     
 }
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
+    }
+
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 
