@@ -39,11 +39,12 @@ class MisSolicitudesViewController: UIViewController {
     private var Denuncias: [DenunciaModel]!
     private var ImagenesList: [ImageneModel] = []
     private var RespuestasList: [RespuestaModel] = []
+    private var SolicitudMobile_Id: String = ""
 
     override func viewDidLoad() {
  
         super.viewDidLoad()
-        
+
         sayBtnTomarFoto()
         
         let S = Singleton.shared
@@ -102,7 +103,7 @@ class MisSolicitudesViewController: UIViewController {
     
     func viewErrorConnectionAPI(){
         DispatchQueue.main.async { [self] in
-//            lblBienvenida.text = errorSet
+            lblBienvenida.text = errorSet
 //            Activity.stopAnimating()
 //            Activity.isHidden = true
         }
@@ -182,14 +183,16 @@ extension MisSolicitudesViewController: UITableViewDataSource, UITableViewDelega
         
     }
     
-    func callSegueFromCellChatList(Respuestas: [RespuestaModel]) {
-        self.RespuestasList = Respuestas
-        self.performSegue(withIdentifier: "goToRespuestaList", sender:self )
+    func callSegueFromCellImageList( Imagenes: [ImageneModel], SolicitudMobile_Id: String ) {
+        self.ImagenesList = Imagenes
+        self.SolicitudMobile_Id = SolicitudMobile_Id
+        self.performSegue(withIdentifier: "goToImagesList", sender:self )
     }
     
-    func callSegueFromCellImageList( Imagenes: [ImageneModel] ) {
-        self.ImagenesList = Imagenes
-        self.performSegue(withIdentifier: "goToImagesList", sender:self )
+    func callSegueFromCellChatList(Respuestas: [RespuestaModel], SolicitudMobile_Id: String) {
+        self.RespuestasList = Respuestas
+        self.SolicitudMobile_Id = SolicitudMobile_Id
+        self.performSegue(withIdentifier: "goToRespuestaList", sender:self )
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -197,12 +200,14 @@ extension MisSolicitudesViewController: UITableViewDataSource, UITableViewDelega
         if(segue.identifier == "goToImagesList") {
             if let destination = segue.destination as? ImagesListViewController {
                 destination.Imagenes = self.ImagenesList
+                destination.denunciamobile_id = self.SolicitudMobile_Id
             }
         }
         
         if(segue.identifier == "goToRespuestaList") {
-            if let destination = segue.destination as? ChatListTableViewController {
+            if let destination = segue.destination as? ChatListViewController {
                 destination.Respuestas = self.RespuestasList
+                destination.denunciamobile_id = self.SolicitudMobile_Id
             }
         }
 

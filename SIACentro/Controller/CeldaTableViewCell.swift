@@ -6,14 +6,14 @@
 //
 
 import UIKit
-import Kingfisher
+//import Kingfisher
 
 protocol CeldaImagesListViewCellDelegate {
-    func callSegueFromCellImageList(Imagenes: [ImageneModel])
+    func callSegueFromCellImageList(Imagenes: [ImageneModel], SolicitudMobile_Id: String)
 }
 
 protocol CeldaChatListViewCellDelegate {
-    func callSegueFromCellChatList(Respuestas: [RespuestaModel])
+    func callSegueFromCellChatList(Respuestas: [RespuestaModel], SolicitudMobile_Id: String)
 }
 
 
@@ -23,15 +23,16 @@ class CeldaTableViewCell: UITableViewCell {
     var delegateChatList:CeldaChatListViewCellDelegate!
     
     @IBAction func btnImagen(_ sender: UIButton) {
-        self.delegateImageList.callSegueFromCellImageList(Imagenes: Imagenes)
+        self.delegateImageList.callSegueFromCellImageList(Imagenes: Imagenes, SolicitudMobile_Id: DenunciaMobile_Id)
     }
 
     @IBAction func btnMessage(_ sender: UIButton) {
-        self.delegateChatList.callSegueFromCellChatList(Respuestas: Respuestas)
+        self.delegateChatList.callSegueFromCellChatList(Respuestas: Respuestas, SolicitudMobile_Id: DenunciaMobile_Id)
     }
 
     var Imagenes:[ImageneModel] = [];
     var Respuestas:[RespuestaModel] = [];
+    var DenunciaMobile_Id = "0"
 
     @IBOutlet weak var btnImagen: UIButton!
     @IBOutlet weak var ViewCell: UIView!
@@ -74,6 +75,7 @@ class CeldaTableViewCell: UITableViewCell {
         
         Imagenes = model.imagenes!;
         Respuestas = model.respuestas!;
+        DenunciaMobile_Id = String(model.id)
         
         lblServicio.text = model.servicio!
         lblFecha.text = model.fecha!
@@ -109,7 +111,9 @@ class CeldaTableViewCell: UITableViewCell {
         if let data = try? Data(contentsOf: url) {
             if UIImage(data: data) != nil {
                 DispatchQueue.main.async {
-                    self!.Imagen.kf.setImage(with: url)
+//                    self!.Imagen.kf.setImage(with: url)
+                    let image = UIImage(data:data, scale:1.0) // UIImage(data: data)
+                    self!.Imagen.image = image
                 }
             }
         }

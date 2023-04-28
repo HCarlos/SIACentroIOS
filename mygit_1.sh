@@ -36,7 +36,7 @@ git rm -r --cached composer.lock
 
 git add .
 
-git commit -m "SIACentroIOS - A1 - A2 | L7.30.6 Production"
+git commit -m "SIACentroIOS - V1.3 | Production"
 
 git push -u origin main --force
 

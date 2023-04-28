@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class LoginViewController: UIViewController {
     
@@ -14,6 +15,21 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var lblError: UILabel!
     @IBOutlet weak var Activity: UIActivityIndicatorView!
     @IBOutlet weak var logo: UIImageView!
+    
+    @IBOutlet var btnOlvideMiContrasena: UIButton!
+
+    @IBAction func btnOlvideMiContrasena(_ sender: UIButton) {
+//        let alertController = UIAlertController(title: title, message: "Modulo en construcción", preferredStyle:UIAlertController.Style.alert)
+//        alertController.addAction(UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default) { action -> Void in
+//            // Put your code here
+//        })
+//        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBOutlet var btnQuieroRegistrarme: UIButton!
+    
+    @IBAction func btnQuieroRegistrarme(_ sender: UIButton) {
+    }
     
     lazy var userManager = UserManager()
     
@@ -29,33 +45,26 @@ class LoginViewController: UIViewController {
         }
     }
 
-    private var imagenFondo: UIImageView {
-        let imageView = UIImageView(frame: UIScreen.main.bounds)
-        imageView.image = UIImage(named: "Background")
-        imageView.contentMode = .scaleToFill
-        
-        txtUsername.textColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
-        txtUsername.layer.borderColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
-        txtUsername.layer.borderWidth = 1
-        txtUsername.layer.cornerRadius = 8;
-
-        txtPassword.textColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
-        txtPassword.layer.borderColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
-        txtPassword.layer.borderWidth = 1
-        txtPassword.layer.cornerRadius = 8;
-
-       return imageView
-        
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         userManager.delegate = self
         Activity.isHidden = true
         self.hideKeyboardWhenTappedAround()
 
-        view.insertSubview(imagenFondo, at: 0)
+        view.insertSubview(Funciones.setImagenFondo(), at: 0)
+
+        txtUsername.textColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
+        txtUsername.layer.borderColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
+        txtUsername.layer.borderWidth = 1
+        txtUsername.layer.cornerRadius = 8
+
+        txtPassword.textColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
+        txtPassword.layer.borderColor = #colorLiteral(red: 0.5529411765, green: 0.4431372549, blue: 0.1843137255, alpha: 1)
+        txtPassword.layer.borderWidth = 1
+        txtPassword.layer.cornerRadius = 8
         
+        //btnOlvideMiContrasena.isHidden = true
+
     }
             
 
@@ -63,18 +72,13 @@ class LoginViewController: UIViewController {
         
         var Username = txtUsername.text
         var Password = txtPassword.text
-        Username = Username == nil ? "nada" : Username
-        Password = Password == nil ? "algo" : Password
+        Username = Username == nil || Username == "" ? "" : Username
+        Password = Password == nil || Password == "" ? "" : Password
         
         self.lblError.text = "Iniciando sessión..."
         
-//        let concat = Username! + " " + Password!
-        
-//        print("PRESIONASTE : " + concat)
         Activity.isHidden = false
         Activity.startAnimating()
-        
-        //userManager.fetchUserAPI()
         
         userManager.postRequest(username: Username ?? "", password: Password ?? "")
         
@@ -102,6 +106,7 @@ class LoginViewController: UIViewController {
                     self.present(myVC, animated: true, completion: nil)
                 
             }
+            
             Activity.stopAnimating()
             Activity.isHidden = true
 
@@ -114,18 +119,14 @@ class LoginViewController: UIViewController {
         }
     }
     
-
-    
 }
 
 extension LoginViewController: UserManagerDelegate{
     func didLoginUser(User: UserModel) {
-//        print(User)
         self.UserLogged = User;
     }
     
     func didFailWithError(_str: String) {
-//        print(_str)
         self.errorSet = _str
     }
     
@@ -135,12 +136,12 @@ extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-
     }
 
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
 }
 
 

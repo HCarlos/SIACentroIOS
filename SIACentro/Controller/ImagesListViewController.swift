@@ -10,7 +10,9 @@ import UIKit
 class ImagesListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var Imagenes:[ImageneModel] = []
-    
+    var imagen = ""
+    var denunciamobile_id = "0"
+
     @IBAction func btnListo(_ sender: Any) {
         self.dismiss(animated: true)
     }
@@ -19,6 +21,7 @@ class ImagesListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.insertSubview(Funciones.setImagenFondo(), at: 0)
     }
 
     // MARK: - Table view data source
@@ -33,9 +36,13 @@ class ImagesListViewController: UIViewController, UITableViewDelegate, UITableVi
         return Imagenes.count
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 290
+    }
+    
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! CeldaImageBigTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell", for: indexPath) as! CeldaImageBigViewCell
         let imgModel: ImageneModel! = Imagenes[indexPath.row]
         let urlImage = imgModel.url  ?? ""
         

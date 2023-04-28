@@ -1,14 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "favicon-512-512.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "favicon-512-512@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "favicon-512-512@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

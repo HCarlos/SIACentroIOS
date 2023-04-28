@@ -23,8 +23,13 @@ class Funciones {
         return image!
     }
 
-    
-    
+    static func setImagenFondo() -> UIImageView {
+        let imageView = UIImageView(frame: UIScreen.main.bounds)
+        imageView.image = UIImage(named: "AccentColor")
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = false
+       return imageView
+    }
     
 }
 
